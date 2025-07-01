@@ -1,0 +1,69 @@
+# ASIN数据推送工具 - 优化版本依赖包
+# 安装命令：pip install -r requirements.txt
+
+# ==================== 核心依赖 ====================
+
+# Redis连接 - 用于推送ASIN数据到Redis队列
+redis>=4.5.0,<6.0.0
+
+# MySQL数据库连接 - 用于验证爬虫处理状态
+PyMySQL>=1.0.0,<2.0.0
+
+# SSH隧道支持 - 用于安全连接远程数据库
+sshtunnel>=0.4.0,<1.0.0
+
+# 阿里云OSS存储 - 用于验证图片文件上传状态
+oss2>=2.17.0,<3.0.0
+
+# ==================== 安全依赖 ====================
+
+# 加密库支持 - SSH连接和安全通信
+cryptography>=40.0.0,<42.0.0
+
+# ==================== 开发依赖（可选）====================
+
+# 代码测试框架
+# pytest>=7.0.0,<8.0.0
+# pytest-cov>=4.0.0,<5.0.0
+
+# 代码格式化
+# black>=23.0.0,<24.0.0
+# isort>=5.12.0,<6.0.0
+
+# 代码检查
+# flake8>=6.0.0,<7.0.0
+# pylint>=2.17.0,<3.0.0
+
+# 类型检查
+# mypy>=1.5.0,<2.0.0
+
+# ==================== 系统要求 ====================
+
+# Python版本要求: >= 3.8
+# 操作系统: Windows 10+, macOS 10.15+, Linux (Ubuntu 18.04+)
+
+# ==================== 安装说明 ====================
+
+# 1. 基础安装（仅核心功能）:
+#    pip install redis PyMySQL sshtunnel oss2 cryptography
+
+# 2. 完整安装（包含开发工具）:
+#    pip install -r requirements.txt
+
+# 3. 升级现有包:
+#    pip install --upgrade -r requirements.txt
+
+# ==================== 版本兼容性 ====================
+
+# Redis服务器版本: >= 5.0
+# MySQL服务器版本: >= 5.7
+# 阿里云OSS API版本: >= 2.0
+# SSH服务器: OpenSSH >= 7.0
+
+# ==================== 故障排除 ====================
+
+# 如果遇到安装问题：
+# 1. 更新pip: python -m pip install --upgrade pip
+# 2. 清理缓存: pip cache purge  
+# 3. 使用国内镜像: pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+# 4. Windows用户可能需要安装Visual C++构建工具 
